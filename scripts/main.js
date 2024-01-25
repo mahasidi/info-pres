@@ -2,15 +2,15 @@ const myImage = document.querySelector("img");
 
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/IMG_2665.JPG") {
-    myImage.setAttribute("src", "images/matcha.jpeg");
+  if (mySrc === "images/IMG_2329_Original.jpg") {
+    myImage.setAttribute("src", "images/DSCN0658.jpg");
   } else {
-    myImage.setAttribute("src", "images/IMG_2665.JPG");
+    myImage.setAttribute("src", "images/IMG_2329_Original.jpg");
   }
 };
 
 let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
+let myHeading = document.querySelector("h2");
 
 function setUserName() {
     const myName = prompt("Please enter your name.");
@@ -18,7 +18,7 @@ function setUserName() {
       setUserName();
     } else {
       localStorage.setItem("name", myName);
-      myHeading.textContent = `Here's a matcha review, ${myName}!`;
+      myHeading.textContent = `Hi, ${myName}! 👋🏾`;
     }
   }
 
@@ -26,7 +26,7 @@ function setUserName() {
     setUserName();
   } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Here's a matcha review, ${storedName}!`;
+    myHeading.textContent = `Hi, ${storedName}! 👋🏾`;
   }
 
   myButton.onclick = () => {
